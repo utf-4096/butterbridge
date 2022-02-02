@@ -925,6 +925,18 @@ SyncTopic=false
 # Default "<clipped message>"
 MessageClipped="<clipped message>"
 
+#Disable quoted/reply messages
+#OPTIONAL (default false)
+QuoteDisable=false
+
+#Set the max. quoted length if 0 the whole message will be quoted
+#OPTIONAL (default 0)
+QuoteLengthLimit=0
+
+#Format quoted/reply messages
+#OPTIONAL (default "{MESSAGE} (re @{QUOTENICK}: {QUOTEMESSAGE})")
+QuoteFormat="{MESSAGE} (re @{QUOTENICK}: {QUOTEMESSAGE})"
+
 # Before clipping, try to split messages into at most this many parts. 0 is treated like 1.
 # Be careful with large numbers, as this might cause flooding.
 # Example: A maximum telegram message of 4096 bytes is received. This requires 3 Discord
