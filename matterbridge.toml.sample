@@ -935,6 +935,7 @@ QuoteLengthLimit=0
 
 #Format quoted/reply messages
 #OPTIONAL (default "{MESSAGE} (re @{QUOTENICK}: {QUOTEMESSAGE})")
+#{QUOTEONELINE}: same as {QUOTEMESSAGE} but with newlines replaced by double space
 QuoteFormat="{MESSAGE} (re @{QUOTENICK}: {QUOTEMESSAGE})"
 
 # Before clipping, try to split messages into at most this many parts. 0 is treated like 1.

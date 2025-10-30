@@ -117,9 +117,11 @@ func (b *Bdiscord) handleQuote(s *discordgo.Session, m *discordgo.Message, msg s
 			quoteMessage += "..."
 		}
 	}
+	strippedQuote := strings.ReplaceAll(quoteMessage, "\n", "  ")
 	format = strings.ReplaceAll(format, "{MESSAGE}", m.Content)
 	format = strings.ReplaceAll(format, "{QUOTENICK}", quoteNick)
 	format = strings.ReplaceAll(format, "{QUOTEMESSAGE}", quoteMessage)
+	format = strings.ReplaceAll(format, "{QUOTEONELINE}", strippedQuote)
 	return format
 }
 
